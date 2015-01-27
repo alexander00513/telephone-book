@@ -1,0 +1,19 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:with field="i18n" type="com.gmail.bogatyr.alexander.shared.i18n.AppMessages"></ui:with>
+    <g:HTMLPanel styleName="root">
+        <h1><g:Label ui:field="title" /></h1>
+        <g:Label ui:field="commonMsgLabel" styleName="label-error" visible="false"/>
+        <br />
+        <g:Label ui:field="idLabel" visible="false"/>
+        <g:Label text="{i18n.displayWidgetLabelNumber}"/>
+        <g:Label ui:field="numberLabel"/>
+        <br />
+        <g:Label text="{i18n.displayWidgetLabelName}"/>
+        <g:Label ui:field="nameLabel"/>
+        <br />
+        <g:Button ui:field="editButton" text="{i18n.displayWidgetButtonEdit}"/>
+        <g:Button ui:field="deleteButton" text="{i18n.displayWidgetButtonDelete}"/>
+        <g:Button ui:field="listButton" text="{i18n.displayWidgetButtonBack}"/>
+    </g:HTMLPanel>
+</ui:UiBinder>

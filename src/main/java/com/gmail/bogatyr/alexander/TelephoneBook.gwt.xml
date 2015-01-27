@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module rename-to='TelephoneBook'>
+    <!-- Inherit the core Web Toolkit stuff. -->
+    <inherits name='com.google.gwt.user.User' />
+    <inherits name='com.google.gwt.inject.Inject' />
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    <inherits name="org.hibernate.validator.HibernateValidator" />
+    <replace-with class="com.gmail.bogatyr.alexander.shared.validator.ValidatorFactory">
+        <when-type-is class="javax.validation.ValidatorFactory" />
+    </replace-with>
+    <!--<replace-with class="com.gmail.bogatyr.alexander.shared.i18n.AppValidationMessagesResolver">
+        <when-type-is class="com.google.gwt.validation.client.UserValidationMessagesResolver" />
+    </replace-with>-->
+
+    <extend-property name="locale" values="en"/>
+    <extend-property name="locale" values="ru"/>
+    <set-property-fallback name="locale" value="en"/>
+
+    <!-- Default css -->
+    <inherits name='com.google.gwt.user.theme.standard.Standard' />
+    <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+    <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+    <!-- Other module inherits -->
+    <inherits name='com.gwtplatform.dispatch.Dispatch' />
+    
+    <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' />
+
+    <source path='client' />
+    <source path='shared' />
+
+    <set-configuration-property name="gin.ginjector.modules" 
+                                value="com.gmail.bogatyr.alexander.client.gin.ClientModule"/>
+
+</module>

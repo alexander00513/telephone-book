@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <ui:with field="i18n" type="com.gmail.bogatyr.alexander.shared.i18n.AppMessages"></ui:with>
+    <g:HTMLPanel styleName="root">
+        <h1><ui:text from="{i18n.listWidgetLabelTitle}" /></h1>
+        <g:Label ui:field="commonMsgLabel" styleName="label-error" visible="false"/>
+        <br />
+        <g:Label text="{i18n.listWidgetLabelSearch}"/>
+        <g:TextBox ui:field="searchField"/>
+        <g:Button ui:field="searchButton" text="{i18n.listWidgetButtonSearch}"/>
+        <g:Label ui:field="searchErrorLabel" styleName="label-error" visible="false"/>
+        <br /><br />
+        <g:Label text="{i18n.listWidgetLabelNumber}"/>
+        <g:TextBox ui:field="numberField"/>
+        <g:Label ui:field="numberErrorLabel" styleName="label-error" visible="false"/>
+        <br />
+        <g:Label text="{i18n.listWidgetLabelName}"/>
+        <g:TextBox ui:field="nameField"/>
+        <g:Label ui:field="nameErrorLabel" styleName="label-error" visible="false"/>
+        <br />
+        <g:Button ui:field="addButton" text="{i18n.listWidgetButtonAdd}"/>
+        <br /><br />
+        <g:FlowPanel ui:field="contactPanel"/>
+    </g:HTMLPanel>
+</ui:UiBinder>
